@@ -38,8 +38,8 @@ void delete_specific(char *array, char *phrase, int *flag) {
     int i;
     for (i=0; i < array_length; i++) {
         for (int j = 0; j < phrase_length; j++) {
-            if (array[i] == phrase[j])
-                if ((array[i+1] == phrase[j+1] && count < phrase_length) || j+1 == phrase_length)
+            if (array[i] == phrase[j]  && count < phrase_length)
+                if (array[i+1] == phrase[j+1] || j+1 == phrase_length)
                 count ++;
         }
     }
